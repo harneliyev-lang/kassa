@@ -3,11 +3,10 @@ from fastapi.responses import HTMLResponse, RedirectResponse
 import sqlite3
 from datetime import datetime, timedelta
 
-app = FastAPI()@app.get("/")
+app = FastAPI()
+@app.get("/")
 def read_root():
     return RedirectResponse(url="/login")
-DB_NAME = "kassa_v4.db"
-
 def get_db():
     conn = sqlite3.connect(DB_NAME)
     conn.row_factory = sqlite3.Row
