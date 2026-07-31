@@ -111,6 +111,22 @@ COMMON_STYLE = """
     
     .filter-btn { padding: 6px 12px; border: 1px solid var(--border-color); border-radius: 6px; background: var(--input-bg); color: var(--text-color); text-decoration: none; font-size: 13px; }
     .filter-btn.active { background: var(--accent-color); color: white; border-color: var(--accent-color); font-weight: bold; }
+    @media (max-width: 600px) {
+    body {
+        padding: 10px !important;
+        margin: 0 !important;
+    }
+    .card, .container, form, div[class*="box"] {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    input, button, select {
+        font-size: 18px !important;
+        padding: 14px !important;
+        width: 100% !important;
+    }
+}
 </style>
 <script>
     function toggleTheme() {
