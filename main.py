@@ -3,7 +3,9 @@ from fastapi.responses import HTMLResponse, RedirectResponse
 import sqlite3
 from datetime import datetime, timedelta
 
-app = FastAPI()
+app = FastAPI()@app.get("/")
+def read_root():
+    return RedirectResponse(url="/login")
 DB_NAME = "kassa_v4.db"
 
 def get_db():
