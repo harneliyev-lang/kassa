@@ -160,10 +160,15 @@ def login_page(error: str = "", lang: str = "ru"):
     pwa_txt = "📲 Tətbiq kimi quraşdırın" if is_az else "📲 Установить как приложение"
 
     return f"""
-    <!DOCTYPE html>
-    <html>
-    <head><meta charset="UTF-8"><title>{title}</title>{COMMON_STYLE}</head>
-    <body>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>{title}</title>
+    {COMMON_STYLE}
+</head>
+<body>
         <div class="top-bar">
             <button class="btn-toggle" onclick="toggleTheme()">🌗 Тема / Mövzu</button>
             <div>
